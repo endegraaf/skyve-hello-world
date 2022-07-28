@@ -11,4 +11,31 @@
 	<typedef name="TimeOnly" class="org.skyve.impl.domain.types.TimeOnlyUserType" />
 	<typedef name="Timestamp" class="org.skyve.impl.domain.types.TimestampUserType" />
 	<typedef name="Enum" class="org.skyve.impl.domain.types.EnumUserType" />
+	<class name="modules.helloWorld.domain.AddressBook" table="HEL_AddressBook" entity-name="helloWorldAddressBook">
+		<id name="bizId" length="36" />
+		<version name="bizVersion" unsaved-value="null" />
+		<property name="bizLock" type="OptimisticLock" length="271" not-null="true" />
+		<property name="bizKey" length="1024" not-null="true" />
+		<property name="bizCustomer" length="50" not-null="true" />
+		<property name="bizFlagComment" length="1024" />
+		<property name="bizDataGroupId" length="36" />
+		<property name="bizUserId" length="36" not-null="true" />
+		<property name="inputText" length="100" />
+		<property name="outputText" length="100" />
+		<filter name="helloWorldAddressBookNoneFilter" condition="1=0"/>
+		<filter name="helloWorldAddressBookCustomerFilter" condition="bizCustomer=:customerParam"/>
+		<filter name="helloWorldAddressBookDataGroupIdFilter" condition="bizDataGroupId=:dataGroupIdParam"/>
+		<filter name="helloWorldAddressBookUserIdFilter" condition="bizUserId=:userIdParam"/>
+	</class>
+
+	<filter-def name="helloWorldAddressBookNoneFilter" />
+	<filter-def name="helloWorldAddressBookCustomerFilter">
+		<filter-param name="customerParam" type="string"/>
+	</filter-def>
+	<filter-def name="helloWorldAddressBookDataGroupIdFilter">
+		<filter-param name="dataGroupIdParam" type="string"/>
+	</filter-def>
+	<filter-def name="helloWorldAddressBookUserIdFilter">
+		<filter-param name="userIdParam" type="string"/>
+	</filter-def>
 </hibernate-mapping>

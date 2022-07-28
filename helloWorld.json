@@ -1,148 +1,149 @@
 {
-	        	        
-	        	"trace": {
-		        		"xml": false, 
-		        		"http": true,
-		        		"query": false, 
-		        		"command": false,
-		        		"faces": false, 
-		        		"sql": false, 
-		        		"content": false, 
-		        		"security": true, 
-		        		"bizlet": false, 
-		        		"dirty": false
-	},
-	        	"content": {
-		        		"directory": "/home/egraaf/eclipse-workspace/content/",
-		        		"gcCron": "0 7 0/1 1/1 * ? *", 
-		        		"fileStorage": true
-	},
-	        	"addins": {
-		        		"directory": "/home/egraaf/eclipse-workspace/content/addins/"
-	},
-	        	        	        	        	        	"uploads": {
-		"file": {
-			"whitelistRegex": null,
-			"maximumSizeMB": null
-		},
-		"content": {
-			"whitelistRegex": null,
-			"maximumSizeMB": null
-		},
-		"image": {
-			"whitelistRegex": null,
-			"maximumSizeMB": null
-		},
-		"bizport": {
-			        			"whitelistRegex": null,
-			"maximumSizeMB": null
-		}
-	},
-	        	"thumbnail": {
-		        		        		        		        		"concurrentThreads": 10,
-		        		        		        		        		        		        		"subsamplingMinimumTargetSize": 512,
-		        		"fileStorage": true,
-		        		        		"directory": null
-	},
-	        	"url": {
-		"server": "http://localhost:8080",
-    "context": "/helloWorld",
-		        		"home": "/"
-	},
-	        	"state": {
-		        		"conversations": {
-			        			"heapSizeEntries": 1000,
-			        			"offHeapSizeMB": 64,
-			        			"diskSizeGB": 10,
-			        			"expiryTimeMinutes": 60
-		},
-		        		"csrfTokens": {
-			        			"heapSizeEntries": 1000,
-			        			"offHeapSizeMB": 64,
-			        			"diskSizeGB": 10,
-			        			"expiryTimeMinutes": 60
-		},
-		        		"evictCron": "0 37 0 1/1 * ? *"
-	},	
-	        	"dataStores": {
-		        		"skyve": {
-			        			"jndi": "java:/helloWorldDB",
-			        			"dialect": "${SKYVE_DATASTORE_DIALECT:org.skyve.impl.persistence.hibernate.dialect.H2SpatialDialect}",
-			        			"oltpConnectionTimeoutInSeconds": 30,
-			        			"asyncConnectionTimeoutInSeconds": 300
-		}
-	},
-	        	"hibernate": {
-		        		"dataStore": "skyve", 
-		        		"ddlSync": true, 
-		"catalog": null,
-		"schema": null,
-		        		"prettySql": false,
-		"caches": {
-			"eternal": {
-				        				"heapSizeEntries": 10,
-				        				"offHeapSizeMB": 0,
-				"expiryPolicy": "eternal"         			},
-			"reference": {
-				        				"heapSizeEntries": 1000,
-				        				"offHeapSizeMB": 0,
-				"expiryPolicy": "timeToIdle",         				        				"expiryTimeMinutes": 10
-			}
-		}
-	},
-	        	"factories": {
-		        		"persistenceClass": null, 
-		        		"repositoryClass": null,
-		        		"contentManagerClass": null
-	},
-	        	"smtp": {
-		        		"server": "${SKYVE_SMTP_SERVER:localhost}",
-		        		"port": 465,
-		        		"uid": "${SKYVE_SMTP_UID:null}",
-		        		"pwd": "${SKYVE_SMTP_PWD:null}",
-		        		"properties": null,
-		        		"headers": null,
-		        		"sender": "mailer@skyve.org", 
-		        		"testBogusSend": false, 
-		        		"testRecipient": "endegraaf@gmail.com"
-	},
-	        	"map": {
-		        		"type": "leaflet",
-		        		"layers": "[L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {maxZoom: 19, attribution: '&copy; <a href=\\\"https://www.openstreetmap.org/copyright\\\">OpenStreetMap</a> contributors'})]"
+    "trace":{
+        "xml":false,
+        "http":true,
+        "query":false,
+        "command":false,
+        "faces":false,
+        "sql":false,
+        "content":false,
+        "security":true,
+        "bizlet":false,
+        "dirty":false
+    },
+    "content":{
+        "directory":"./content/",
+        "gcCron":"0 7 0/1 1/1 * ? *",
+        "fileStorage":true
+    },
+    "addins":{
+        "directory":"./content/addins/"
+    },
+    "uploads":{
+        "file":{
+            "whitelistRegex":null,
+            "maximumSizeMB":null
+        },
+        "content":{
+            "whitelistRegex":null,
+            "maximumSizeMB":null
+        },
+        "image":{
+            "whitelistRegex":null,
+            "maximumSizeMB":null
+        },
+        "bizport":{
+            "whitelistRegex":null,
+            "maximumSizeMB":null
+        }
+    },
+    "thumbnail":{
+        "concurrentThreads":10,
+        "subsamplingMinimumTargetSize":512,
+        "fileStorage":true,
+        "directory":null
+    },
+    "url":{
+        "server":"http://localhost:8080",
+        "context":"/helloWorld",
+        "home":"/"
+    },
+    "state":{
+        "conversations":{
+            "heapSizeEntries":1000,
+            "offHeapSizeMB":64,
+            "diskSizeGB":10,
+            "expiryTimeMinutes":60
+        },
+        "csrfTokens":{
+            "heapSizeEntries":1000,
+            "offHeapSizeMB":64,
+            "diskSizeGB":10,
+            "expiryTimeMinutes":60
+        },
+        "evictCron":"0 37 0 1/1 * ? *"
+    },
+    "dataStores":{
+        "skyve":{
+            "jndi":"java:/helloWorldDB",
+            "dialect":"${SKYVE_DATASTORE_DIALECT:org.skyve.impl.persistence.hibernate.dialect.H2SpatialDialect}",
+            "oltpConnectionTimeoutInSeconds":30,
+            "asyncConnectionTimeoutInSeconds":300
+        }
+    },
+    "hibernate":{
+        "dataStore":"skyve",
+        "ddlSync":true,
+        "catalog":null,
+        "schema":null,
+        "prettySql":false,
+        "caches":{
+            "eternal":{
+                "heapSizeEntries":10,
+                "offHeapSizeMB":0,
+                "expiryPolicy":"eternal"
             },
-	        	"api": {
-		        		"googleMapsV3Key": null,
-		"googleRecaptchaSiteKey": null,
-		"ckEditorConfigFileUrl": null
-	},
-	        	"account": {
-		        		"passwordHashingAlgorithm": "bcrypt",
-		        		"passwordExpiryInDays": null,
-		        		"passwordHistoryRetention": null,
-		        		"accountLockoutThreshold": 3,
-		        		"accountLockoutDurationMultipleInSeconds": 10,
-		        		"allowUserSelfRegistration": false,
-		        		"loginUri": "/login",
-		        		        		        		"googleAuthClientId": null,
-		"googleAuthSecret": null,
-		        		        		        		"facebookAuthClientId": null,
-		"facebookAuthSecret": null,
-		        		        		        		"githubAuthClientId": null,
-		"githubAuthSecret": null
-	},
-	        	"environment": {
-		        		"identifier": "dev",
-		        		"devMode": true,
-		        		"customer": "skyve",
-		        		"jobScheduler": true,
-		        		        		        		        		"moduleDirectory": null,
-		        		"supportEmailAddress": "endegraaf@gmail.com",
-		        		"showSetup": true
-	},
-	        	        	"bootstrap": {
-		"customer": "skyve",
-		"user": "demo",
-		"email": "endegraaf@gmail.com",
-		"password": "demo"
-	}
+            "reference":{
+                "heapSizeEntries":1000,
+                "offHeapSizeMB":0,
+                "expiryPolicy":"timeToIdle",
+                "expiryTimeMinutes":10
+            }
+        }
+    },
+    "factories":{
+        "persistenceClass":null,
+        "repositoryClass":null,
+        "contentManagerClass":null
+    },
+    "smtp":{
+        "server":"${SKYVE_SMTP_SERVER:localhost}",
+        "port":465,
+        "uid":"${SKYVE_SMTP_UID:null}",
+        "pwd":"${SKYVE_SMTP_PWD:null}",
+        "properties":null,
+        "headers":null,
+        "sender":"mailer@skyve.org",
+        "testBogusSend":false,
+        "testRecipient":"endegraaf@gmail.com"
+    },
+    "map":{
+        "type":"leaflet",
+        "layers":"[L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {maxZoom: 19, attribution: '&copy; <a href=\\\"https://www.openstreetmap.org/copyright\\\">OpenStreetMap</a> contributors'})]"
+    },
+    "api":{
+        "googleMapsV3Key":null,
+        "googleRecaptchaSiteKey":null,
+        "ckEditorConfigFileUrl":null
+    },
+    "account":{
+        "passwordHashingAlgorithm":"bcrypt",
+        "passwordExpiryInDays":null,
+        "passwordHistoryRetention":null,
+        "accountLockoutThreshold":3,
+        "accountLockoutDurationMultipleInSeconds":10,
+        "allowUserSelfRegistration":false,
+        "loginUri":"/login",
+        "googleAuthClientId":null,
+        "googleAuthSecret":null,
+        "facebookAuthClientId":null,
+        "facebookAuthSecret":null,
+        "githubAuthClientId":null,
+        "githubAuthSecret":null
+    },
+    "environment":{
+        "identifier":"dev",
+        "devMode":true,
+        "customer":"skyve",
+        "jobScheduler":true,
+        "moduleDirectory":null,
+        "supportEmailAddress":"endegraaf@gmail.com",
+        "showSetup":true
+    },
+    "bootstrap":{
+        "customer":"skyve",
+        "user":"demo",
+        "email":"endegraaf@gmail.com",
+        "password":"demo"
+    }
 }

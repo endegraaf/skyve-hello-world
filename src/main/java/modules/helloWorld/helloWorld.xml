@@ -3,6 +3,7 @@
     <homeRef>edit</homeRef>
     <homeDocument>Demonstration</homeDocument>
     <documents>
+        <document ref="AddressBook"/>
         <document ref="Demonstration"/>
     </documents>
     <roles>
@@ -12,6 +13,9 @@
                 <document name="Demonstration" permission="_R__C">
                     <action name="EchoText"/>
                 </document>
+                <document name="AddressBook" permission="_R__C">
+                <action name="New"/>
+                </document>
             </privileges>
         </role>
         <role name="Maintainer">
@@ -20,11 +24,18 @@
                 <document name="Demonstration" permission="CRUDC">
                     <action name="EchoText"/>
                 </document>
+                <document name="AddressBook" permission="_R__C">
+                <action name="New"/>
+                </document>
             </privileges>
         </role>
     </roles>
     <menu>
         <edit document="Demonstration" name="Demonstration">
+            <role name="Maintainer"/>
+            <role name="Viewer"/>
+        </edit>
+        <edit document="AddressBook" name="AddressBook">
             <role name="Maintainer"/>
             <role name="Viewer"/>
         </edit>
