@@ -1,6 +1,5 @@
 package modules.helloWorld.domain;
 
-import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
 import javax.xml.bind.annotation.XmlType;
@@ -27,22 +26,6 @@ public class AddressBook extends AbstractPersistentBean {
 
 	/** @hidden */
 	public static final String DOCUMENT_NAME = "AddressBook";
-
-	/** @hidden */
-	public static final String inputTextPropertyName = "inputText";
-
-	/** @hidden */
-	public static final String outputTextPropertyName = "outputText";
-
-	/**
-	 * Input Text
-	 **/
-	private String inputText = "Hello World";
-
-	/**
-	 * Output Text
-	 **/
-	private String outputText;
 
 	@Override
 	@XmlTransient
@@ -83,41 +66,5 @@ public class AddressBook extends AbstractPersistentBean {
 	public boolean equals(Object o) {
 		return ((o instanceof AddressBook) && 
 					this.getBizId().equals(((AddressBook) o).getBizId()));
-	}
-
-	/**
-	 * {@link #inputText} accessor.
-	 * @return	The value.
-	 **/
-	public String getInputText() {
-		return inputText;
-	}
-
-	/**
-	 * {@link #inputText} mutator.
-	 * @param inputText	The new value.
-	 **/
-	@XmlElement
-	public void setInputText(String inputText) {
-		preset(inputTextPropertyName, inputText);
-		this.inputText = inputText;
-	}
-
-	/**
-	 * {@link #outputText} accessor.
-	 * @return	The value.
-	 **/
-	public String getOutputText() {
-		return outputText;
-	}
-
-	/**
-	 * {@link #outputText} mutator.
-	 * @param outputText	The new value.
-	 **/
-	@XmlElement
-	public void setOutputText(String outputText) {
-		preset(outputTextPropertyName, outputText);
-		this.outputText = outputText;
 	}
 }

@@ -20,8 +20,6 @@
 		<property name="bizFlagComment" length="1024" />
 		<property name="bizDataGroupId" length="36" />
 		<property name="bizUserId" length="36" not-null="true" />
-		<property name="inputText" length="100" />
-		<property name="outputText" length="100" />
 		<filter name="helloWorldAddressBookNoneFilter" condition="1=0"/>
 		<filter name="helloWorldAddressBookCustomerFilter" condition="bizCustomer=:customerParam"/>
 		<filter name="helloWorldAddressBookDataGroupIdFilter" condition="bizDataGroupId=:dataGroupIdParam"/>

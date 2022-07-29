@@ -14,7 +14,7 @@
                     <action name="EchoText"/>
                 </document>
                 <document name="AddressBook" permission="_R__C">
-                <action name="New"/>
+                    <action name="New"/>
                 </document>
             </privileges>
         </role>
@@ -25,7 +25,7 @@
                     <action name="EchoText"/>
                 </document>
                 <document name="AddressBook" permission="_R__C">
-                <action name="New"/>
+                    <action name="New"/>
                 </document>
             </privileges>
         </role>
