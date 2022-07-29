@@ -4,5 +4,17 @@
     <singularAlias>AddressBook</singularAlias>
     <pluralAlias>addressbooks</pluralAlias>
     <bizKey expression="AddressBook"/>
-    <attributes/>
+    <attributes>
+        <text required="true" name="inputText">
+            <displayName>Input Text</displayName>
+            <dynamic>false</dynamic>
+            <defaultValue>Hello World</defaultValue>
+            <length>100</length>
+        </text>
+        <text name="outputText">
+            <displayName>Output Text</displayName>
+            <dynamic>false</dynamic>
+            <length>100</length>
+        </text>
+    </attributes>
 </document>
